@@ -1,0 +1,14 @@
+{
+	"objectDefinitionName": "Event",
+	"object-entries": [
+		{
+			"externalReferenceCode": "EVENT_KEYNOTE",
+			"eventName": "Opening Keynote: Building What Matters",
+			"description": "A practical opening keynote on choosing ambitious problems and shipping technology that earns trust.",
+			"startsAt": "2026-10-14T09:00:00Z",
+			"endsAt": "2026-10-14T10:30:00Z",
+			"venue": "Grand Hall",
+			"capacity": 500
+		}
+	]
+}

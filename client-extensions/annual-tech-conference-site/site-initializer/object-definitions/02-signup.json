@@ -1,0 +1,47 @@
+{
+	"externalReferenceCode": "SIGNUP",
+	"label": {
+		"en_US": "Signup"
+	},
+	"name": "Signup",
+	"objectFields": [
+		{
+			"businessType": "Text",
+			"label": {
+				"en_US": "Name"
+			},
+			"name": "attendeeName",
+			"required": true
+		},
+		{
+			"businessType": "Text",
+			"label": {
+				"en_US": "Email"
+			},
+			"name": "email",
+			"required": true
+		},
+		{
+			"businessType": "Text",
+			"label": {
+				"en_US": "Company"
+			},
+			"name": "company",
+			"required": true
+		},
+		{
+			"businessType": "Picklist",
+			"label": {
+				"en_US": "Dietary requirement"
+			},
+			"listTypeDefinitionExternalReferenceCode": "DIETARY_REQUIREMENT",
+			"name": "dietaryRequirement",
+			"required": true
+		}
+	],
+	"pluralLabel": {
+		"en_US": "Signups"
+	},
+	"scope": "company",
+	"titleObjectFieldName": "attendeeName"
+}

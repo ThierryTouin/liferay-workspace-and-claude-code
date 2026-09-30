@@ -1,0 +1,16 @@
+dev-events-annual-tech-conference-site:
+    name: Annual Tech Conference Site
+    oAuthApplicationHeadlessServer: dev-events-annual-tech-conference-oauth
+    siteExternalReferenceCode: annual-tech-conference
+    siteName: Annual Tech Conference
+    type: siteInitializer
+
+dev-events-annual-tech-conference-oauth:
+    name: Annual Tech Conference Site OAuth
+    scopes:
+        - Liferay.Headless.Admin.Site.everything
+        - Liferay.Headless.Admin.Content.everything
+        - Liferay.Object.Admin.REST.everything
+        - Liferay.Headless.Object.everything
+        - Liferay.Headless.Admin.User.everything
+    type: oAuthApplicationHeadlessServer

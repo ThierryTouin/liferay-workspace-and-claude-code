@@ -1,0 +1,74 @@
+{
+	"externalReferenceCode": "EVENT",
+	"label": {
+		"en_US": "Event"
+	},
+	"name": "Event",
+	"objectFields": [
+		{
+			"businessType": "Text",
+			"label": {
+				"en_US": "Name"
+			},
+			"name": "eventName",
+			"required": true
+		},
+		{
+			"businessType": "LongText",
+			"label": {
+				"en_US": "Description"
+			},
+			"name": "description",
+			"required": true
+		},
+		{
+			"businessType": "DateTime",
+			"label": {
+				"en_US": "Starts"
+			},
+			"name": "startsAt",
+			"objectFieldSettings": [
+				{
+					"name": "timeStorage",
+					"value": "convertToUTC"
+				}
+			],
+			"required": true
+		},
+		{
+			"businessType": "DateTime",
+			"label": {
+				"en_US": "Ends"
+			},
+			"name": "endsAt",
+			"objectFieldSettings": [
+				{
+					"name": "timeStorage",
+					"value": "convertToUTC"
+				}
+			],
+			"required": true
+		},
+		{
+			"businessType": "Text",
+			"label": {
+				"en_US": "Venue"
+			},
+			"name": "venue",
+			"required": true
+		},
+		{
+			"businessType": "Integer",
+			"label": {
+				"en_US": "Capacity"
+			},
+			"name": "capacity",
+			"required": true
+		}
+	],
+	"pluralLabel": {
+		"en_US": "Events"
+	},
+	"scope": "company",
+	"titleObjectFieldName": "eventName"
+}

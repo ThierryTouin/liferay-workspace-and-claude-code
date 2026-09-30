@@ -1,0 +1,14 @@
+{
+	"objectDefinitionName": "Event",
+	"object-entries": [
+		{
+			"externalReferenceCode": "EVENT_WORKSHOP",
+			"eventName": "Workshop: Designing for Resilient Teams",
+			"description": "Hands-on exercises for building team habits that make delivery calmer, clearer, and more resilient.",
+			"startsAt": "2026-10-14T13:00:00Z",
+			"endsAt": "2026-10-14T15:00:00Z",
+			"venue": "Studio B",
+			"capacity": 80
+		}
+	]
+}

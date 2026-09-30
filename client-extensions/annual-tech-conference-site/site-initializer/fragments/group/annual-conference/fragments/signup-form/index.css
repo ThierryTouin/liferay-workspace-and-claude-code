@@ -1,0 +1,69 @@
+#wrapper .conference-signup-wrapper {
+	background: #173f4f;
+	color: #fff;
+	display: grid;
+	gap: 3rem;
+	grid-template-columns: minmax(0, 1fr) minmax(18rem, 30rem);
+	padding: 5rem max(1.5rem, calc((100vw - 70rem) / 2));
+}
+
+#wrapper .conference-signup-intro {
+	align-self: center;
+}
+
+#wrapper .conference-signup-intro h1 {
+	font-size: clamp(2.5rem, 5vw, 5rem);
+	line-height: 1;
+	margin-bottom: 1rem;
+}
+
+#wrapper .conference-signup-intro > p:last-child {
+	color: #d8e7ea;
+	font-size: 1.2rem;
+}
+
+#wrapper .conference-signup-form {
+	background: #f4f7f8;
+	color: #173f4f;
+	display: grid;
+	gap: .55rem;
+	padding: 2rem;
+}
+
+#wrapper .conference-signup-form label {
+	font-size: .9rem;
+	font-weight: 700;
+	margin-top: .65rem;
+}
+
+#wrapper .conference-signup-form input,
+#wrapper .conference-signup-form select {
+	border: 1px solid #b8cbd0;
+	border-radius: 0;
+	font: inherit;
+	min-height: 2.75rem;
+	padding: .6rem .75rem;
+}
+
+#wrapper .conference-signup-form button {
+	background: #d05a3b;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	font: inherit;
+	font-weight: 700;
+	margin-top: 1rem;
+	min-height: 3rem;
+	padding: .75rem 1rem;
+}
+
+#wrapper .conference-form-status {
+	color: #49616b;
+	min-height: 1.5rem;
+}
+
+@media (max-width: 700px) {
+	#wrapper .conference-signup-wrapper {
+		grid-template-columns: 1fr;
+	}
+}

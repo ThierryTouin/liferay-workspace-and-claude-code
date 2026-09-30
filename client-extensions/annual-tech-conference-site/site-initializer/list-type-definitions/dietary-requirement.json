@@ -1,0 +1,41 @@
+{
+	"externalReferenceCode": "DIETARY_REQUIREMENT",
+	"listTypeEntries": [
+		{
+			"externalReferenceCode": "DIETARY_NONE",
+			"key": "none",
+			"name": "No requirements"
+		},
+		{
+			"externalReferenceCode": "DIETARY_VEGETARIAN",
+			"key": "vegetarian",
+			"name": "Vegetarian"
+		},
+		{
+			"externalReferenceCode": "DIETARY_VEGAN",
+			"key": "vegan",
+			"name": "Vegan"
+		},
+		{
+			"externalReferenceCode": "DIETARY_HALAL",
+			"key": "halal",
+			"name": "Halal"
+		},
+		{
+			"externalReferenceCode": "DIETARY_KOSHER",
+			"key": "kosher",
+			"name": "Kosher"
+		},
+		{
+			"externalReferenceCode": "DIETARY_GLUTEN_FREE",
+			"key": "glutenFree",
+			"name": "Gluten-free"
+		},
+		{
+			"externalReferenceCode": "DIETARY_OTHER",
+			"key": "other",
+			"name": "Other"
+		}
+	],
+	"name": "Dietary Requirement"
+}

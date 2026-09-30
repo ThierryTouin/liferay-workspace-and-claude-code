@@ -1,0 +1,13 @@
+{
+	"objectDefinitionName": "Signup",
+	"object-entries": [
+		{
+			"externalReferenceCode": "SIGNUP_ALEX_MORGAN",
+			"attendeeName": "Alex Morgan",
+			"email": "alex.morgan@example.com",
+			"company": "Northstar Labs",
+			"dietaryRequirement": "vegetarian",
+			"r_eventSignups_c_eventERC": "EVENT_KEYNOTE"
+		}
+	]
+}

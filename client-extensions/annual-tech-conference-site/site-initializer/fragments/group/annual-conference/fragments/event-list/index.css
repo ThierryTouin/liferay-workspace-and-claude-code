@@ -1,0 +1,82 @@
+#wrapper .conference-event-list-wrapper {
+	background: #f4f7f8;
+	padding: 4rem 1.5rem;
+}
+
+#wrapper .conference-section-heading,
+#wrapper .conference-event-list {
+	margin: 0 auto;
+	max-width: 70rem;
+}
+
+#wrapper .conference-section-heading {
+	margin-bottom: 2rem;
+}
+
+#wrapper .conference-eyebrow {
+	color: #d05a3b;
+	font-size: .75rem;
+	font-weight: 700;
+	letter-spacing: .12em;
+	margin-bottom: .75rem;
+}
+
+#wrapper .conference-section-heading h2 {
+	color: #173f4f;
+	font-size: clamp(2rem, 4vw, 3.5rem);
+	margin-bottom: .75rem;
+}
+
+#wrapper .conference-section-heading > p:last-child {
+	color: #49616b;
+	font-size: 1.1rem;
+	max-width: 38rem;
+}
+
+#wrapper .conference-event-list {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+
+#wrapper .conference-event-card {
+	background: #fff;
+	border-left: 5px solid #e6a23c;
+	box-shadow: 0 8px 24px rgba(23, 63, 79, .08);
+	display: flex;
+	flex-direction: column;
+	padding: 1.5rem;
+}
+
+#wrapper .conference-event-card h3 {
+	color: #173f4f;
+	font-size: 1.4rem;
+	margin: 0 0 .75rem;
+}
+
+#wrapper .conference-event-card p {
+	color: #49616b;
+	line-height: 1.6;
+}
+
+#wrapper .conference-event-meta {
+	border-top: 1px solid #dce5e8;
+	font-size: .9rem;
+	margin-top: auto;
+	padding-top: 1rem;
+}
+
+#wrapper .conference-event-cta {
+	align-self: flex-start;
+	background: #173f4f;
+	color: #fff;
+	display: inline-block;
+	font-weight: 700;
+	margin-top: 1rem;
+	padding: .75rem 1rem;
+	text-decoration: none;
+}
+
+#wrapper .conference-status {
+	color: #49616b;
+}

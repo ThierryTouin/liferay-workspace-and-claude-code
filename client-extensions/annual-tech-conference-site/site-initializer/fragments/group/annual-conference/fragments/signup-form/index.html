@@ -1,0 +1,36 @@
+<section class="conference-signup-wrapper" aria-labelledby="conference-signup-title">
+	<div class="conference-signup-intro">
+		<p class="conference-eyebrow">SAVE YOUR SEAT</p>
+		<h1 id="conference-signup-title">Join the conversation</h1>
+		<p>Choose an event and tell us how to prepare for you.</p>
+	</div>
+	<form class="conference-signup-form" data-signup-form>
+		<label for="conference-event">Event</label>
+		<select id="conference-event" name="eventId" required data-event-select>
+			<option value="">Loading events...</option>
+		</select>
+
+		<label for="conference-name">Name</label>
+		<input id="conference-name" name="attendeeName" required type="text" />
+
+		<label for="conference-email">Email</label>
+		<input id="conference-email" name="email" required type="email" />
+
+		<label for="conference-company">Company</label>
+		<input id="conference-company" name="company" required type="text" />
+
+		<label for="conference-diet">Dietary requirement</label>
+		<select id="conference-diet" name="dietaryRequirement" required>
+			<option value="none">No requirements</option>
+			<option value="vegetarian">Vegetarian</option>
+			<option value="vegan">Vegan</option>
+			<option value="halal">Halal</option>
+			<option value="kosher">Kosher</option>
+			<option value="glutenFree">Gluten-free</option>
+			<option value="other">Other</option>
+		</select>
+
+		<button type="submit">Reserve my seat</button>
+		<p class="conference-form-status" data-form-status role="status"></p>
+	</form>
+</section>

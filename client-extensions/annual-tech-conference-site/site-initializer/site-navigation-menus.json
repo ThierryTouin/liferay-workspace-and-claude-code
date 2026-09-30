@@ -1,0 +1,22 @@
+[
+	{
+		"auto": false,
+		"externalReferenceCode": "ANNUAL_CONFERENCE_MAIN_MENU",
+		"menuItems": [
+			{
+				"externalReferenceCode": "ANNUAL_CONFERENCE_EVENTS",
+				"friendlyURL": "/events",
+				"privateLayout": false,
+				"type": "layout"
+			},
+			{
+				"externalReferenceCode": "ANNUAL_CONFERENCE_REGISTER",
+				"friendlyURL": "/register",
+				"privateLayout": false,
+				"type": "layout"
+			}
+		],
+		"name": "Main Menu",
+		"typeSite": 1
+	}
+]

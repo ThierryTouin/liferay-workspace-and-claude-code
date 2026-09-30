@@ -1,0 +1,12 @@
+{
+	"deletionType": "cascade",
+	"externalReferenceCode": "EVENT_SIGNUPS",
+	"label": {
+		"en_US": "Signups"
+	},
+	"name": "eventSignups",
+	"objectDefinitionId1": "[$OBJECT_DEFINITION_ID:Event$]",
+	"objectDefinitionId2": "[$OBJECT_DEFINITION_ID:Signup$]",
+	"objectDefinitionName2": "Signup",
+	"type": "oneToMany"
+}

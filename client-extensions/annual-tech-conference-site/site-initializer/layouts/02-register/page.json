@@ -1,0 +1,10 @@
+{
+	"friendlyURL": "/register",
+	"hidden": false,
+	"name": "Register",
+	"name_i18n": {
+		"en_US": "Register"
+	},
+	"private": false,
+	"type": "Content"
+}
