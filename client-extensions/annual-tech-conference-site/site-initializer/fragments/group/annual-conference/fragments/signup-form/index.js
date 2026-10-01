@@ -1,35 +1,142 @@
+const root = fragmentElement.querySelector('.conference-signup-wrapper');
 const form = fragmentElement.querySelector('[data-signup-form]');
 const eventSelect = fragmentElement.querySelector('[data-event-select]');
 const statusElement = fragmentElement.querySelector('[data-form-status]');
+const submitButton = fragmentElement.querySelector('[data-submit-button]');
 
-Liferay.Util.fetch('/o/c/events?pageSize=50&sort=startsAt:asc')
-	.then((response) => response.json())
+const successMessage =
+	root.getAttribute('data-success-message') ||
+	'You are on the list. See you there!';
+const submitLabel = root.getAttribute('data-submit-label') || 'Reserve my seat';
+
+submitButton.textContent = submitLabel;
+
+// A switched off field must leave the DOM — hiding it with CSS would still submit it.
+
+['company', 'dietary'].forEach((name) => {
+	const attribute = name === 'company' ? 'data-show-company' : 'data-show-dietary';
+
+	if (root.getAttribute(attribute) === 'false') {
+		const field = fragmentElement.querySelector(`[data-optional-field="${name}"]`);
+
+		if (field) {
+			field.remove();
+		}
+	}
+});
+
+const setStatus = (message, state) => {
+	statusElement.textContent = message;
+
+	if (state) {
+		statusElement.setAttribute('data-state', state);
+	}
+	else {
+		statusElement.removeAttribute('data-state');
+	}
+};
+
+const replaceOptions = (options) => {
+	eventSelect.textContent = '';
+
+	options.forEach(({label, disabled, value}) => {
+		const option = document.createElement('option');
+
+		option.disabled = Boolean(disabled);
+		option.textContent = label;
+		option.value = value;
+
+		eventSelect.appendChild(option);
+	});
+};
+
+// Returns null when the signupCount aggregation is unavailable, so the option
+// label stays silent rather than claiming every place is free.
+
+const seatsLeft = (event) => {
+	if (event.signupCount === undefined || event.signupCount === null) {
+		return null;
+	}
+
+	return Math.max(
+		(parseInt(event.capacity, 10) || 0) - (parseInt(event.signupCount, 10) || 0),
+		0
+	);
+};
+
+const preselectedEventId = new URLSearchParams(window.location.search).get(
+	'eventId'
+);
+
+Liferay.Util.fetch('/o/c/events?pageSize=200&sort=startsAt:asc')
+	.then((response) => {
+		if (!response.ok) {
+			throw new Error('Unable to load events');
+		}
+
+		return response.json();
+	})
 	.then((data) => {
-		eventSelect.innerHTML = '<option value="">Select an event</option>';
+		const now = Date.now();
+		const events = (data.items || []).filter(
+			(event) => new Date(event.endsAt).getTime() >= now
+		);
 
-		data.items.forEach((event) => {
-			const option = document.createElement('option');
-			option.textContent = event.eventName;
-			option.value = event.id;
-			eventSelect.appendChild(option);
-		});
+		if (!events.length) {
+			replaceOptions([{label: 'No events are open yet', value: ''}]);
+
+			return;
+		}
+
+		replaceOptions(
+			[{label: 'Select an event', value: ''}].concat(
+				events.map((event) => {
+					const left = seatsLeft(event);
+
+					if (left === null) {
+						return {label: event.eventName, value: String(event.id)};
+					}
+
+					return {
+						disabled: !left,
+						label: left
+							? `${event.eventName} — ${left} places left`
+							: `${event.eventName} — fully booked`,
+						value: String(event.id),
+					};
+				})
+			)
+		);
+
+		if (preselectedEventId) {
+			eventSelect.value = preselectedEventId;
+		}
 	})
 	.catch(() => {
-		eventSelect.innerHTML = '<option value="">Events unavailable</option>';
+		replaceOptions([{label: 'Events unavailable', value: ''}]);
+		setStatus('We could not load the events right now.', 'error');
 	});
 
 form.addEventListener('submit', (event) => {
 	event.preventDefault();
-	statusElement.textContent = 'Saving your seat...';
+
+	submitButton.disabled = true;
+	setStatus('Saving your seat…');
 
 	const formData = new FormData(form);
 	const payload = {
 		attendeeName: formData.get('attendeeName'),
-		company: formData.get('company'),
-		dietaryRequirement: formData.get('dietaryRequirement'),
 		email: formData.get('email'),
 		r_eventSignups_c_eventId: Number(formData.get('eventId')),
 	};
+
+	if (formData.has('company')) {
+		payload.company = formData.get('company');
+	}
+
+	if (formData.has('dietaryRequirement')) {
+		payload.dietaryRequirement = formData.get('dietaryRequirement');
+	}
 
 	Liferay.Util.fetch('/o/c/signups', {
 		body: JSON.stringify(payload),
@@ -39,7 +146,10 @@ form.addEventListener('submit', (event) => {
 		method: 'POST',
 	})
 		.then(async (response) => {
+			// Anything in front of Liferay may answer with HTML, so read text first.
+
 			const body = await response.text();
+
 			let data = {};
 
 			try {
@@ -59,9 +169,12 @@ form.addEventListener('submit', (event) => {
 		})
 		.then(() => {
 			form.reset();
-			statusElement.textContent = 'You are on the list. See you there!';
+			setStatus(successMessage, 'success');
 		})
 		.catch((error) => {
-			statusElement.textContent = error.message || 'We could not save your signup.';
+			setStatus(error.message || 'We could not save your signup.', 'error');
+		})
+		.finally(() => {
+			submitButton.disabled = false;
 		});
 });

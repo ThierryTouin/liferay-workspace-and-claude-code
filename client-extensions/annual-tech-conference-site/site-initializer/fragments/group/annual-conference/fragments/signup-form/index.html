@@ -1,36 +1,52 @@
-<section class="conference-signup-wrapper" aria-labelledby="conference-signup-title">
+<section aria-label="Event signup" class="conference-signup-wrapper conference-signup--${configuration.theme!'dark'}" data-layout="${configuration.layout!'split'}" data-show-company="${(configuration.showCompany!true)?c}" data-show-dietary="${(configuration.showDietary!true)?c}" data-submit-label="${configuration.submitLabel!'Reserve my seat'}" data-success-message="${configuration.successMessage!'You are on the list. See you there!'}">
 	<div class="conference-signup-intro">
-		<p class="conference-eyebrow">SAVE YOUR SEAT</p>
-		<h1 id="conference-signup-title">Join the conversation</h1>
-		<p>Choose an event and tell us how to prepare for you.</p>
+		<p class="conference-signup-intro__eyebrow" data-lfr-editable-id="eyebrow" data-lfr-editable-type="text">SAVE YOUR SEAT</p>
+
+		<h1 class="conference-signup-intro__title" data-lfr-editable-id="title" data-lfr-editable-type="text">Join the conversation</h1>
+
+		<div class="conference-signup-intro__lead" data-lfr-editable-id="lead" data-lfr-editable-type="rich-text">
+			<p>Pick the session you want, tell us who you are, and we will hold a place for you.</p>
+		</div>
 	</div>
+
 	<form class="conference-signup-form" data-signup-form>
-		<label for="conference-event">Event</label>
-		<select id="conference-event" name="eventId" required data-event-select>
-			<option value="">Loading events...</option>
-		</select>
+		<label class="conference-field">
+			<span class="conference-field__label">Which event?</span>
+			<select class="conference-field__control" data-event-select name="eventId" required>
+				<option value="">Loading events&hellip;</option>
+			</select>
+		</label>
 
-		<label for="conference-name">Name</label>
-		<input id="conference-name" name="attendeeName" required type="text" />
+		<label class="conference-field">
+			<span class="conference-field__label">Your name</span>
+			<input autocomplete="name" class="conference-field__control" name="attendeeName" required type="text" />
+		</label>
 
-		<label for="conference-email">Email</label>
-		<input id="conference-email" name="email" required type="email" />
+		<label class="conference-field">
+			<span class="conference-field__label">Email address</span>
+			<input autocomplete="email" class="conference-field__control" name="email" required type="email" />
+		</label>
 
-		<label for="conference-company">Company</label>
-		<input id="conference-company" name="company" required type="text" />
+		<label class="conference-field" data-optional-field="company">
+			<span class="conference-field__label">Company</span>
+			<input autocomplete="organization" class="conference-field__control" name="company" required type="text" />
+		</label>
 
-		<label for="conference-diet">Dietary requirement</label>
-		<select id="conference-diet" name="dietaryRequirement" required>
-			<option value="none">No requirements</option>
-			<option value="vegetarian">Vegetarian</option>
-			<option value="vegan">Vegan</option>
-			<option value="halal">Halal</option>
-			<option value="kosher">Kosher</option>
-			<option value="glutenFree">Gluten-free</option>
-			<option value="other">Other</option>
-		</select>
+		<label class="conference-field" data-optional-field="dietary">
+			<span class="conference-field__label">Dietary requirement</span>
+			<select class="conference-field__control" name="dietaryRequirement" required>
+				<option value="none">No requirements</option>
+				<option value="vegetarian">Vegetarian</option>
+				<option value="vegan">Vegan</option>
+				<option value="halal">Halal</option>
+				<option value="kosher">Kosher</option>
+				<option value="glutenFree">Gluten-free</option>
+				<option value="other">Other</option>
+			</select>
+		</label>
 
-		<button type="submit">Reserve my seat</button>
+		<button class="conference-signup-form__submit" data-submit-button type="submit">Reserve my seat</button>
+
 		<p class="conference-form-status" data-form-status role="status"></p>
 	</form>
 </section>

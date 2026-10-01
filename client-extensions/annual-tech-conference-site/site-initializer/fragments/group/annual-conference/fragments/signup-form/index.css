@@ -1,69 +1,125 @@
 #wrapper .conference-signup-wrapper {
-	background: #173f4f;
-	color: #fff;
 	display: grid;
 	gap: 3rem;
 	grid-template-columns: minmax(0, 1fr) minmax(18rem, 30rem);
 	padding: 5rem max(1.5rem, calc((100vw - 70rem) / 2));
 }
 
+#wrapper .conference-signup-wrapper[data-layout='stacked'] {
+	gap: 2rem;
+	grid-template-columns: minmax(0, 36rem);
+	justify-content: center;
+}
+
+#wrapper .conference-signup--dark {
+	background: #173f4f;
+	color: #fff;
+}
+
+#wrapper .conference-signup--light {
+	background: #f4f7f8;
+	color: #173f4f;
+}
+
 #wrapper .conference-signup-intro {
 	align-self: center;
 }
 
-#wrapper .conference-signup-intro h1 {
-	font-size: clamp(2.5rem, 5vw, 5rem);
-	line-height: 1;
+#wrapper .conference-signup-intro__eyebrow {
+	font-size: .8rem;
+	font-weight: 700;
+	letter-spacing: .14em;
+	margin-bottom: 1rem;
+	opacity: .85;
+}
+
+#wrapper .conference-signup-intro__title {
+	font-size: clamp(2.5rem, 5vw, 4.5rem);
+	line-height: 1.05;
 	margin-bottom: 1rem;
 }
 
-#wrapper .conference-signup-intro > p:last-child {
-	color: #d8e7ea;
+#wrapper .conference-signup-intro__lead {
 	font-size: 1.2rem;
+	line-height: 1.6;
+	opacity: .9;
 }
 
 #wrapper .conference-signup-form {
-	background: #f4f7f8;
+	background: #fff;
+	box-shadow: 0 12px 32px rgba(23, 63, 79, .18);
 	color: #173f4f;
 	display: grid;
-	gap: .55rem;
+	gap: 1rem;
 	padding: 2rem;
 }
 
-#wrapper .conference-signup-form label {
-	font-size: .9rem;
-	font-weight: 700;
-	margin-top: .65rem;
+#wrapper .conference-field {
+	display: grid;
+	gap: .35rem;
 }
 
-#wrapper .conference-signup-form input,
-#wrapper .conference-signup-form select {
+#wrapper .conference-field__label {
+	font-size: .9rem;
+	font-weight: 700;
+}
+
+#wrapper .conference-field__control {
 	border: 1px solid #b8cbd0;
 	border-radius: 0;
 	font: inherit;
 	min-height: 2.75rem;
 	padding: .6rem .75rem;
+	width: 100%;
 }
 
-#wrapper .conference-signup-form button {
+#wrapper .conference-field__control:focus {
+	border-color: #173f4f;
+	outline: 2px solid #e6a23c;
+	outline-offset: 1px;
+}
+
+#wrapper .conference-signup-form__submit {
 	background: #d05a3b;
 	border: 0;
 	color: #fff;
 	cursor: pointer;
 	font: inherit;
 	font-weight: 700;
-	margin-top: 1rem;
+	margin-top: .5rem;
 	min-height: 3rem;
 	padding: .75rem 1rem;
 }
 
+#wrapper .conference-signup-form__submit:hover,
+#wrapper .conference-signup-form__submit:focus {
+	background: #b94a2d;
+}
+
+#wrapper .conference-signup-form__submit[disabled] {
+	cursor: progress;
+	opacity: .7;
+}
+
 #wrapper .conference-form-status {
 	color: #49616b;
+	margin: 0;
 	min-height: 1.5rem;
+}
+
+#wrapper .conference-form-status[data-state='error'] {
+	color: #8a2b2b;
+	font-weight: 700;
+}
+
+#wrapper .conference-form-status[data-state='success'] {
+	color: #1b6b45;
+	font-weight: 700;
 }
 
 @media (max-width: 700px) {
 	#wrapper .conference-signup-wrapper {
 		grid-template-columns: 1fr;
+		padding: 3rem 1.5rem;
 	}
 }

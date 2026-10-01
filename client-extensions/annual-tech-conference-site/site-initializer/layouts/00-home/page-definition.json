@@ -1,0 +1,74 @@
+{
+	"pageElement": {
+		"pageElements": [
+			{
+				"definition": {
+					"fragment": {
+						"key": "conference-hero",
+						"siteKey": "[$GROUP_KEY$]"
+					},
+					"fragmentConfig": {
+						"showCta": true,
+						"size": "full",
+						"theme": "dark"
+					}
+				},
+				"type": "Fragment"
+			},
+			{
+				"definition": {
+					"fragment": {
+						"key": "event-list",
+						"siteKey": "[$GROUP_KEY$]"
+					},
+					"fragmentConfig": {
+						"ctaLabel": "Save me a place",
+						"layout": "grid",
+						"maxItems": "3",
+						"showCta": true,
+						"showSeatsLeft": true,
+						"upcomingOnly": true
+					},
+					"fragmentFields": [
+						{
+							"id": "eyebrow",
+							"value": {
+								"fragmentLink": {},
+								"text": {
+									"value_i18n": {
+										"en_US": "COMING UP"
+									}
+								}
+							}
+						},
+						{
+							"id": "title",
+							"value": {
+								"fragmentLink": {},
+								"text": {
+									"value_i18n": {
+										"en_US": "The next sessions"
+									}
+								}
+							}
+						},
+						{
+							"id": "lead",
+							"value": {
+								"fragmentLink": {},
+								"text": {
+									"value_i18n": {
+										"en_US": "A taste of what is on. Seats go quickly, so grab one while it is still there."
+									}
+								}
+							}
+						}
+					]
+				},
+				"type": "Fragment"
+			}
+		],
+		"type": "Root"
+	},
+	"version": "1.0"
+}

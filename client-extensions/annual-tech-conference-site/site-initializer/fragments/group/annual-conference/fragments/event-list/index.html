@@ -1,10 +1,15 @@
-<section class="conference-event-list-wrapper" aria-labelledby="conference-events-title">
+<section aria-label="Conference events" class="conference-event-list-wrapper" data-cta-label="${configuration.ctaLabel!'Reserve a seat'}" data-layout="${configuration.layout!'grid'}" data-max-items="${configuration.maxItems!'50'}" data-show-cta="${(configuration.showCta!true)?c}" data-show-seats-left="${(configuration.showSeatsLeft!true)?c}" data-upcoming-only="${(configuration.upcomingOnly!true)?c}">
 	<div class="conference-section-heading">
-		<p class="conference-eyebrow">PROGRAMME</p>
-		<h2 id="conference-events-title">Choose your next room</h2>
-		<p>Explore the sessions and reserve a seat for the conversations you want to join.</p>
+		<p class="conference-section-heading__eyebrow" data-lfr-editable-id="eyebrow" data-lfr-editable-type="text">PROGRAMME</p>
+
+		<h2 class="conference-section-heading__title" data-lfr-editable-id="title" data-lfr-editable-type="text">Choose your next room</h2>
+
+		<div class="conference-section-heading__lead" data-lfr-editable-id="lead" data-lfr-editable-type="rich-text">
+			<p>Explore the sessions and reserve a seat for the conversations you want to join.</p>
+		</div>
 	</div>
-	<div class="conference-event-list" data-event-list>
-		<p class="conference-status" data-event-status>Loading events...</p>
-	</div>
+
+	<div class="conference-event-list" data-event-list></div>
+
+	<p class="conference-status" data-event-status role="status">Loading events&hellip;</p>
 </section>

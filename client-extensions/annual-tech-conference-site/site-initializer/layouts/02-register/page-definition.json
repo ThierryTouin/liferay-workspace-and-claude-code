@@ -6,7 +6,50 @@
 					"fragment": {
 						"key": "signup-form",
 						"siteKey": "[$GROUP_KEY$]"
-					}
+					},
+					"fragmentConfig": {
+						"layout": "split",
+						"showCompany": true,
+						"showDietary": true,
+						"submitLabel": "Reserve my seat",
+						"successMessage": "You are on the list. We have emailed nobody yet, but your place is held.",
+						"theme": "dark"
+					},
+					"fragmentFields": [
+						{
+							"id": "eyebrow",
+							"value": {
+								"fragmentLink": {},
+								"text": {
+									"value_i18n": {
+										"en_US": "SAVE YOUR SEAT"
+									}
+								}
+							}
+						},
+						{
+							"id": "title",
+							"value": {
+								"fragmentLink": {},
+								"text": {
+									"value_i18n": {
+										"en_US": "Sign up for a session"
+									}
+								}
+							}
+						},
+						{
+							"id": "lead",
+							"value": {
+								"fragmentLink": {},
+								"text": {
+									"value_i18n": {
+										"en_US": "Pick the event you want and tell us how to prepare for you. It takes about thirty seconds."
+									}
+								}
+							}
+						}
+					]
 				},
 				"type": "Fragment"
 			}

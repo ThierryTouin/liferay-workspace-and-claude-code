@@ -1,0 +1,79 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"dataType": "string",
+					"defaultValue": "50",
+					"label": "How many events to show",
+					"name": "maxItems",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"value": "3"
+							},
+							{
+								"value": "6"
+							},
+							{
+								"value": "12"
+							},
+							{
+								"value": "50"
+							}
+						]
+					}
+				},
+				{
+					"defaultValue": true,
+					"label": "Only show events that have not happened yet",
+					"name": "upcomingOnly",
+					"type": "checkbox"
+				}
+			],
+			"label": "Content"
+		},
+		{
+			"fields": [
+				{
+					"dataType": "string",
+					"defaultValue": "grid",
+					"label": "Layout",
+					"name": "layout",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"value": "grid"
+							},
+							{
+								"value": "rows"
+							}
+						]
+					}
+				},
+				{
+					"defaultValue": true,
+					"label": "Show places remaining",
+					"name": "showSeatsLeft",
+					"type": "checkbox"
+				},
+				{
+					"defaultValue": true,
+					"label": "Show the signup button on each event",
+					"name": "showCta",
+					"type": "checkbox"
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "Reserve a seat",
+					"label": "Signup button label",
+					"name": "ctaLabel",
+					"type": "text"
+				}
+			],
+			"label": "Appearance"
+		}
+	]
+}

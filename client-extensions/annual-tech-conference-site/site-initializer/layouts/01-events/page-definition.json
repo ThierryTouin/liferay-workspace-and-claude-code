@@ -4,9 +4,101 @@
 			{
 				"definition": {
 					"fragment": {
+						"key": "conference-hero",
+						"siteKey": "[$GROUP_KEY$]"
+					},
+					"fragmentConfig": {
+						"showCta": false,
+						"size": "compact",
+						"theme": "accent"
+					},
+					"fragmentFields": [
+						{
+							"id": "eyebrow",
+							"value": {
+								"fragmentLink": {},
+								"text": {
+									"value_i18n": {
+										"en_US": "THE PROGRAMME"
+									}
+								}
+							}
+						},
+						{
+							"id": "title",
+							"value": {
+								"fragmentLink": {},
+								"text": {
+									"value_i18n": {
+										"en_US": "Every session, in one place"
+									}
+								}
+							}
+						},
+						{
+							"id": "lead",
+							"value": {
+								"fragmentLink": {},
+								"text": {
+									"value_i18n": {
+										"en_US": "Dates, venues and how many places are still open."
+									}
+								}
+							}
+						}
+					]
+				},
+				"type": "Fragment"
+			},
+			{
+				"definition": {
+					"fragment": {
 						"key": "event-list",
 						"siteKey": "[$GROUP_KEY$]"
-					}
+					},
+					"fragmentConfig": {
+						"ctaLabel": "Reserve a seat",
+						"layout": "rows",
+						"maxItems": "50",
+						"showCta": true,
+						"showSeatsLeft": true,
+						"upcomingOnly": false
+					},
+					"fragmentFields": [
+						{
+							"id": "eyebrow",
+							"value": {
+								"fragmentLink": {},
+								"text": {
+									"value_i18n": {
+										"en_US": "ALL EVENTS"
+									}
+								}
+							}
+						},
+						{
+							"id": "title",
+							"value": {
+								"fragmentLink": {},
+								"text": {
+									"value_i18n": {
+										"en_US": "Choose your next room"
+									}
+								}
+							}
+						},
+						{
+							"id": "lead",
+							"value": {
+								"fragmentLink": {},
+								"text": {
+									"value_i18n": {
+										"en_US": "Every session we are running, with the date, the venue and the places remaining."
+									}
+								}
+							}
+						}
+					]
 				},
 				"type": "Fragment"
 			}

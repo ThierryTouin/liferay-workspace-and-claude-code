@@ -1,0 +1,52 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"dataType": "string",
+					"defaultValue": "dark",
+					"label": "Colour theme",
+					"name": "theme",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"value": "dark"
+							},
+							{
+								"value": "light"
+							},
+							{
+								"value": "accent"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "full",
+					"label": "Height",
+					"name": "size",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"value": "full"
+							},
+							{
+								"value": "compact"
+							}
+						]
+					}
+				},
+				{
+					"defaultValue": true,
+					"label": "Show the call to action buttons",
+					"name": "showCta",
+					"type": "checkbox"
+				}
+			],
+			"label": "Appearance"
+		}
+	]
+}

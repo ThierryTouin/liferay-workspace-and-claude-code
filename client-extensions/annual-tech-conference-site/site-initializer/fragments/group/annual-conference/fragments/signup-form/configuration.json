@@ -1,0 +1,74 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"defaultValue": true,
+					"label": "Ask for the company name",
+					"name": "showCompany",
+					"type": "checkbox"
+				},
+				{
+					"defaultValue": true,
+					"label": "Ask for dietary requirements",
+					"name": "showDietary",
+					"type": "checkbox"
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "You are on the list. See you there!",
+					"label": "Confirmation message",
+					"name": "successMessage",
+					"type": "text"
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "Reserve my seat",
+					"label": "Submit button label",
+					"name": "submitLabel",
+					"type": "text"
+				}
+			],
+			"label": "Fields"
+		},
+		{
+			"fields": [
+				{
+					"dataType": "string",
+					"defaultValue": "split",
+					"label": "Layout",
+					"name": "layout",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"value": "split"
+							},
+							{
+								"value": "stacked"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "dark",
+					"label": "Colour theme",
+					"name": "theme",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"value": "dark"
+							},
+							{
+								"value": "light"
+							}
+						]
+					}
+				}
+			],
+			"label": "Appearance"
+		}
+	]
+}

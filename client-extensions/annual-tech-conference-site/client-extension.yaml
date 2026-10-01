@@ -6,6 +6,8 @@ dev-events-annual-tech-conference-site:
     type: siteInitializer
 
 dev-events-annual-tech-conference-oauth:
+    .serviceAddress: localhost:8080
+    .serviceScheme: http
     name: Annual Tech Conference Site OAuth
     scopes:
         - Liferay.Headless.Admin.Site.everything

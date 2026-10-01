@@ -1,0 +1,132 @@
+#wrapper .conference-hero-wrapper {
+	display: flex;
+	overflow: hidden;
+	padding: 1.5rem;
+	position: relative;
+}
+
+#wrapper .conference-hero-wrapper::after {
+	border-radius: 50%;
+	content: '';
+	height: 40rem;
+	opacity: .35;
+	position: absolute;
+	right: -12rem;
+	top: -16rem;
+	width: 40rem;
+}
+
+#wrapper .conference-hero__inner {
+	margin: 0 auto;
+	max-width: 70rem;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+#wrapper .conference-hero--full {
+	min-height: 32rem;
+	padding-bottom: 6rem;
+	padding-top: 6rem;
+}
+
+#wrapper .conference-hero--compact {
+	padding-bottom: 3rem;
+	padding-top: 3rem;
+}
+
+#wrapper .conference-hero--dark {
+	background: #173f4f;
+	color: #fff;
+}
+
+#wrapper .conference-hero--dark::after {
+	background: #d05a3b;
+}
+
+#wrapper .conference-hero--accent {
+	background: #d05a3b;
+	color: #fff;
+}
+
+#wrapper .conference-hero--accent::after {
+	background: #173f4f;
+}
+
+#wrapper .conference-hero--light {
+	background: #f4f7f8;
+	color: #173f4f;
+}
+
+#wrapper .conference-hero--light::after {
+	background: #e6a23c;
+}
+
+#wrapper .conference-hero__eyebrow {
+	font-size: .8rem;
+	font-weight: 700;
+	letter-spacing: .14em;
+	margin-bottom: 1rem;
+	opacity: .85;
+}
+
+#wrapper .conference-hero__title {
+	font-size: clamp(2.5rem, 6vw, 5rem);
+	font-weight: 800;
+	line-height: 1.02;
+	margin: 0 0 1.25rem;
+	max-width: 20ch;
+}
+
+#wrapper .conference-hero--compact .conference-hero__title {
+	font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+#wrapper .conference-hero__lead {
+	font-size: 1.2rem;
+	line-height: 1.6;
+	max-width: 42rem;
+	opacity: .9;
+}
+
+#wrapper .conference-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-top: 2.25rem;
+}
+
+#wrapper .conference-hero-wrapper[data-show-cta='false'] .conference-hero__actions {
+	display: none;
+}
+
+#wrapper .conference-hero__cta {
+	background: #e6a23c;
+	color: #173f4f;
+	display: inline-block;
+	font-weight: 700;
+	padding: .9rem 1.75rem;
+	text-decoration: none;
+}
+
+#wrapper .conference-hero__cta:hover,
+#wrapper .conference-hero__cta:focus {
+	background: #f0b55c;
+	color: #173f4f;
+}
+
+#wrapper .conference-hero__link {
+	border-bottom: 2px solid currentColor;
+	color: inherit;
+	font-weight: 700;
+	padding: .9rem 0;
+	text-decoration: none;
+}
+
+@media (max-width: 700px) {
+	#wrapper .conference-hero--full {
+		min-height: 0;
+		padding-bottom: 3.5rem;
+		padding-top: 3.5rem;
+	}
+}

@@ -4,6 +4,12 @@
 		"externalReferenceCode": "ANNUAL_CONFERENCE_MAIN_MENU",
 		"menuItems": [
 			{
+				"externalReferenceCode": "ANNUAL_CONFERENCE_HOME",
+				"friendlyURL": "/home",
+				"privateLayout": false,
+				"type": "layout"
+			},
+			{
 				"externalReferenceCode": "ANNUAL_CONFERENCE_EVENTS",
 				"friendlyURL": "/events",
 				"privateLayout": false,
