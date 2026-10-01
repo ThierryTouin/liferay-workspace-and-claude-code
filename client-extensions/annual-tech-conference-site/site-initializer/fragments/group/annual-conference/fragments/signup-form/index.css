@@ -1,8 +1,11 @@
+/* Percentage padding resolves against the containing block, so unlike 100vw it
+   excludes the scrollbar and cannot push the page into horizontal overflow. */
+
 #wrapper .conference-signup-wrapper {
 	display: grid;
 	gap: 3rem;
 	grid-template-columns: minmax(0, 1fr) minmax(18rem, 30rem);
-	padding: 5rem max(1.5rem, calc((100vw - 70rem) / 2));
+	padding: 5rem max(1.5rem, calc((100% - 70rem) / 2));
 }
 
 #wrapper .conference-signup-wrapper[data-layout='stacked'] {

@@ -5,6 +5,7 @@
 	"name_i18n": {
 		"en_US": "Events"
 	},
+	"priority": 1,
 	"private": false,
 	"type": "Content"
 }
