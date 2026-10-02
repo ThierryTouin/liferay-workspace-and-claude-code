@@ -15,13 +15,13 @@
 }
 
 #wrapper .conference-signup--dark {
-	background: #173f4f;
+	background: #071b33;
 	color: #fff;
 }
 
 #wrapper .conference-signup--light {
-	background: #f4f7f8;
-	color: #173f4f;
+	background: #f3f6f8;
+	color: #071b33;
 }
 
 #wrapper .conference-signup-intro {
@@ -38,6 +38,8 @@
 
 #wrapper .conference-signup-intro__title {
 	font-size: clamp(2.5rem, 5vw, 4.5rem);
+	font-family: "Arial Black", "Aptos Display", "Franklin Gothic Heavy", sans-serif;
+	font-weight: 900;
 	line-height: 1.05;
 	margin-bottom: 1rem;
 }
@@ -50,8 +52,8 @@
 
 #wrapper .conference-signup-form {
 	background: #fff;
-	box-shadow: 0 12px 32px rgba(23, 63, 79, .18);
-	color: #173f4f;
+	box-shadow: 0 12px 32px rgba(7, 27, 51, .18);
+	color: #071b33;
 	display: grid;
 	gap: 1rem;
 	padding: 2rem;
@@ -68,7 +70,7 @@
 }
 
 #wrapper .conference-field__control {
-	border: 1px solid #b8cbd0;
+	border: 1px solid #b8c4d0;
 	border-radius: 0;
 	font: inherit;
 	min-height: 2.75rem;
@@ -77,15 +79,15 @@
 }
 
 #wrapper .conference-field__control:focus {
-	border-color: #173f4f;
-	outline: 2px solid #e6a23c;
+	border-color: #071b33;
+	outline: 2px solid #f2b544;
 	outline-offset: 1px;
 }
 
 #wrapper .conference-signup-form__submit {
-	background: #d05a3b;
+	background: #f2b544;
 	border: 0;
-	color: #fff;
+	color: #071b33;
 	cursor: pointer;
 	font: inherit;
 	font-weight: 700;
@@ -96,7 +98,7 @@
 
 #wrapper .conference-signup-form__submit:hover,
 #wrapper .conference-signup-form__submit:focus {
-	background: #b94a2d;
+	background: #ffc963;
 }
 
 #wrapper .conference-signup-form__submit[disabled] {
@@ -105,7 +107,7 @@
 }
 
 #wrapper .conference-form-status {
-	color: #49616b;
+	color: #4a5a6a;
 	margin: 0;
 	min-height: 1.5rem;
 }

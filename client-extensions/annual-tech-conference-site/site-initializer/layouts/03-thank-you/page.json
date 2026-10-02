@@ -1,0 +1,12 @@
+{
+	"friendlyURL": "/thank-you",
+	"hidden": true,
+	"name": "Thank You",
+	"name_i18n": {
+		"en_US": "Thank You"
+	},
+	"priority": 3,
+	"private": false,
+	"system": false,
+	"type": "Content"
+}

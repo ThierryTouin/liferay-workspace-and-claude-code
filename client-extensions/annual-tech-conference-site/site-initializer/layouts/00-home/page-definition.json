@@ -4,6 +4,15 @@
 			{
 				"definition": {
 					"fragment": {
+						"key": "conference-header",
+						"siteKey": "[$GROUP_KEY$]"
+					}
+				},
+				"type": "Fragment"
+			},
+			{
+				"definition": {
+					"fragment": {
 						"key": "conference-hero",
 						"siteKey": "[$GROUP_KEY$]"
 					},
@@ -64,6 +73,15 @@
 							}
 						}
 					]
+				},
+				"type": "Fragment"
+			},
+			{
+				"definition": {
+					"fragment": {
+						"key": "conference-footer",
+						"siteKey": "[$GROUP_KEY$]"
+					}
 				},
 				"type": "Fragment"
 			}

@@ -36,30 +36,30 @@
 }
 
 #wrapper .conference-hero--dark {
-	background: #173f4f;
+	background: #071b33;
 	color: #fff;
 }
 
 #wrapper .conference-hero--dark::after {
-	background: #d05a3b;
+	background: #f2b544;
 }
 
 #wrapper .conference-hero--accent {
-	background: #d05a3b;
-	color: #fff;
+	background: #f2b544;
+	color: #071b33;
 }
 
 #wrapper .conference-hero--accent::after {
-	background: #173f4f;
+	background: #071b33;
 }
 
 #wrapper .conference-hero--light {
-	background: #f4f7f8;
-	color: #173f4f;
+	background: #f3f6f8;
+	color: #071b33;
 }
 
 #wrapper .conference-hero--light::after {
-	background: #e6a23c;
+	background: #f2b544;
 }
 
 #wrapper .conference-hero__eyebrow {
@@ -72,7 +72,8 @@
 
 #wrapper .conference-hero__title {
 	font-size: clamp(2.5rem, 6vw, 5rem);
-	font-weight: 800;
+	font-family: "Arial Black", "Aptos Display", "Franklin Gothic Heavy", sans-serif;
+	font-weight: 900;
 	line-height: 1.02;
 	margin: 0 0 1.25rem;
 	max-width: 20ch;
@@ -101,8 +102,8 @@
 }
 
 #wrapper .conference-hero__cta {
-	background: #e6a23c;
-	color: #173f4f;
+	background: #f2b544;
+	color: #071b33;
 	display: inline-block;
 	font-weight: 700;
 	padding: .9rem 1.75rem;
@@ -111,8 +112,19 @@
 
 #wrapper .conference-hero__cta:hover,
 #wrapper .conference-hero__cta:focus {
-	background: #f0b55c;
-	color: #173f4f;
+	background: #ffc963;
+	color: #071b33;
+}
+
+#wrapper .conference-hero--accent .conference-hero__cta {
+	background: #071b33;
+	color: #fff;
+}
+
+#wrapper .conference-hero--accent .conference-hero__cta:hover,
+#wrapper .conference-hero--accent .conference-hero__cta:focus {
+	background: #041326;
+	color: #fff;
 }
 
 #wrapper .conference-hero__link {

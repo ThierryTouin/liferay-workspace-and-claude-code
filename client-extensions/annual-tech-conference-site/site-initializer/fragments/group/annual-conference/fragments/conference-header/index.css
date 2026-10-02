@@ -1,0 +1,78 @@
+#wrapper .conference-site-header {
+	background: #071b33;
+	border-top: 4px solid #f2b544;
+	color: #fff;
+	padding: 0 1.5rem;
+}
+
+#wrapper .conference-site-header__inner {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem 2rem;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 72rem;
+	min-height: 5rem;
+}
+
+#wrapper .conference-site-header__brand {
+	border-left: 4px solid #f2b544;
+	color: #fff;
+	font-family: "Arial Black", "Aptos Display", "Franklin Gothic Heavy", sans-serif;
+	font-size: 1.15rem;
+	font-weight: 900;
+	line-height: 1.2;
+	padding-left: .75rem;
+	text-decoration: none;
+}
+
+#wrapper .conference-site-header__navigation {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: .5rem 1.75rem;
+}
+
+#wrapper .conference-site-header__navigation a {
+	border-bottom: 2px solid transparent;
+	color: #fff;
+	font-size: .95rem;
+	font-weight: 700;
+	padding: .65rem 0;
+	text-decoration: none;
+}
+
+#wrapper .conference-site-header__navigation a:hover,
+#wrapper .conference-site-header__navigation a:focus-visible {
+	border-bottom-color: #f2b544;
+	color: #ffc963;
+}
+
+#wrapper h1,
+#wrapper h2,
+#wrapper h3,
+#wrapper h4,
+#wrapper h5,
+#wrapper h6,
+#wrapper .conference-hero__title,
+#wrapper .conference-section-heading__title,
+#wrapper .conference-event-card__title,
+#wrapper .conference-signup-intro__title {
+	font-family: "Arial Black", "Aptos Display", "Franklin Gothic Heavy", sans-serif;
+	font-weight: 900;
+}
+
+@media (max-width: 40rem) {
+	#wrapper .conference-site-header__inner {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: .75rem;
+		justify-content: center;
+		padding: 1rem 0;
+	}
+
+	#wrapper .conference-site-header__navigation {
+		gap: .5rem 1.25rem;
+	}
+}

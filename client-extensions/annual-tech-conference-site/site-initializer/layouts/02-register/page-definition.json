@@ -4,6 +4,15 @@
 			{
 				"definition": {
 					"fragment": {
+						"key": "conference-header",
+						"siteKey": "[$GROUP_KEY$]"
+					}
+				},
+				"type": "Fragment"
+			},
+			{
+				"definition": {
+					"fragment": {
 						"key": "signup-form",
 						"siteKey": "[$GROUP_KEY$]"
 					},
@@ -12,7 +21,6 @@
 						"showCompany": true,
 						"showDietary": true,
 						"submitLabel": "Reserve my seat",
-						"successMessage": "You are on the list. We have emailed nobody yet, but your place is held.",
 						"theme": "dark"
 					},
 					"fragmentFields": [
@@ -50,6 +58,15 @@
 							}
 						}
 					]
+				},
+				"type": "Fragment"
+			},
+			{
+				"definition": {
+					"fragment": {
+						"key": "conference-footer",
+						"siteKey": "[$GROUP_KEY$]"
+					}
 				},
 				"type": "Fragment"
 			}

@@ -16,13 +16,6 @@
 				},
 				{
 					"dataType": "string",
-					"defaultValue": "You are on the list. See you there!",
-					"label": "Confirmation message",
-					"name": "successMessage",
-					"type": "text"
-				},
-				{
-					"dataType": "string",
 					"defaultValue": "Reserve my seat",
 					"label": "Submit button label",
 					"name": "submitLabel",

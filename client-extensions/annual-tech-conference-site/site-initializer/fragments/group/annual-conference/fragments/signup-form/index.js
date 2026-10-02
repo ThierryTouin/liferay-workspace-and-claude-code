@@ -4,9 +4,6 @@ const eventSelect = fragmentElement.querySelector('[data-event-select]');
 const statusElement = fragmentElement.querySelector('[data-form-status]');
 const submitButton = fragmentElement.querySelector('[data-submit-button]');
 
-const successMessage =
-	root.getAttribute('data-success-message') ||
-	'You are on the list. See you there!';
 const submitLabel = root.getAttribute('data-submit-label') || 'Reserve my seat';
 
 submitButton.textContent = submitLabel;
@@ -168,8 +165,7 @@ form.addEventListener('submit', (event) => {
 			return data;
 		})
 		.then(() => {
-			form.reset();
-			setStatus(successMessage, 'success');
+			window.location.assign('/web/annual-tech-conference/thank-you');
 		})
 		.catch((error) => {
 			setStatus(error.message || 'We could not save your signup.', 'error');

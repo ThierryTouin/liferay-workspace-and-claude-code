@@ -1,5 +1,5 @@
 #wrapper .conference-event-list-wrapper {
-	background: #f4f7f8;
+	background: #f3f6f8;
 	padding: 4rem 1.5rem;
 }
 
@@ -16,7 +16,7 @@
 }
 
 #wrapper .conference-section-heading__eyebrow {
-	color: #d05a3b;
+	color: #8a5a00;
 	font-size: .75rem;
 	font-weight: 700;
 	letter-spacing: .12em;
@@ -24,13 +24,15 @@
 }
 
 #wrapper .conference-section-heading__title {
-	color: #173f4f;
+	color: #071b33;
 	font-size: clamp(2rem, 4vw, 3.5rem);
+	font-family: "Arial Black", "Aptos Display", "Franklin Gothic Heavy", sans-serif;
+	font-weight: 900;
 	margin-bottom: .75rem;
 }
 
 #wrapper .conference-section-heading__lead {
-	color: #49616b;
+	color: #4a5a6a;
 	font-size: 1.1rem;
 	max-width: 38rem;
 }
@@ -47,28 +49,30 @@
 
 #wrapper .conference-event-card {
 	background: #fff;
-	border-left: 5px solid #e6a23c;
-	box-shadow: 0 8px 24px rgba(23, 63, 79, .08);
+	border-left: 5px solid #f2b544;
+	box-shadow: 0 8px 24px rgba(7, 27, 51, .08);
 	display: flex;
 	flex-direction: column;
 	padding: 1.5rem;
 }
 
 #wrapper .conference-event-card__title {
-	color: #173f4f;
+	color: #071b33;
+	font-family: "Arial Black", "Aptos Display", "Franklin Gothic Heavy", sans-serif;
+	font-weight: 900;
 	font-size: 1.4rem;
 	margin: 0 0 .75rem;
 }
 
 #wrapper .conference-event-card__description {
-	color: #49616b;
+	color: #4a5a6a;
 	line-height: 1.6;
 	margin-bottom: 1rem;
 }
 
 #wrapper .conference-event-card__meta {
-	border-top: 1px solid #dce5e8;
-	color: #49616b;
+	border-top: 1px solid #d6dee7;
+	color: #4a5a6a;
 	display: grid;
 	font-size: .9rem;
 	gap: .35rem;
@@ -77,7 +81,7 @@
 }
 
 #wrapper .conference-event-card__meta dt {
-	color: #7b9099;
+	color: #6f8091;
 	font-size: .7rem;
 	font-weight: 700;
 	letter-spacing: .1em;
@@ -94,7 +98,7 @@
 }
 
 #wrapper .conference-event-card__seats--low {
-	color: #d05a3b;
+	color: #8a5a00;
 }
 
 #wrapper .conference-event-card__seats--full {
@@ -103,7 +107,7 @@
 
 #wrapper .conference-event-cta {
 	align-self: flex-start;
-	background: #173f4f;
+	background: #071b33;
 	color: #fff;
 	display: inline-block;
 	font-weight: 700;
@@ -114,7 +118,7 @@
 
 #wrapper .conference-event-cta:hover,
 #wrapper .conference-event-cta:focus {
-	background: #0f2c38;
+	background: #041326;
 	color: #fff;
 }
 
@@ -124,7 +128,7 @@
 }
 
 #wrapper .conference-status {
-	color: #49616b;
+	color: #4a5a6a;
 }
 
 #wrapper .conference-status[hidden] {

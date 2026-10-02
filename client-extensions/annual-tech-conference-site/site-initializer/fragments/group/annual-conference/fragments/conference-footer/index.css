@@ -1,0 +1,45 @@
+#wrapper .conference-site-footer {
+	background: #071b33;
+	border-top: 4px solid #f2b544;
+	color: #fff;
+	padding: 2rem 1.5rem;
+}
+
+#wrapper .conference-site-footer__inner {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem 2rem;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 72rem;
+}
+
+#wrapper .conference-site-footer__name {
+	font-family: "Arial Black", "Aptos Display", "Franklin Gothic Heavy", sans-serif;
+	font-size: 1.1rem;
+	font-weight: 900;
+}
+
+#wrapper .conference-site-footer__contact {
+	display: grid;
+	gap: .3rem;
+}
+
+#wrapper .conference-site-footer__contact span {
+	color: #f2b544;
+	font-size: .75rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+#wrapper .conference-site-footer__contact a {
+	color: #fff;
+	text-decoration-thickness: 1px;
+	text-underline-offset: .2em;
+}
+
+#wrapper .conference-site-footer__contact a:hover,
+#wrapper .conference-site-footer__contact a:focus-visible {
+	color: #ffc963;
+}

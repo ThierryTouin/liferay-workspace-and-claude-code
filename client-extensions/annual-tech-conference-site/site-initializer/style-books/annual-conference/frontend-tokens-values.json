@@ -1,0 +1,46 @@
+{
+	"bodyBgColor": {
+		"cssVariableMapping": "body-bg",
+		"value": "#f3f6f8"
+	},
+	"bodyColor": {
+		"cssVariableMapping": "body-color",
+		"value": "#071b33"
+	},
+	"primaryColor": {
+		"cssVariableMapping": "primary",
+		"value": "#f2b544"
+	},
+	"secondaryColor": {
+		"cssVariableMapping": "secondary",
+		"value": "#071b33"
+	},
+	"warningColor": {
+		"cssVariableMapping": "warning",
+		"value": "#f2b544"
+	},
+	"btnPrimaryBackgroundColor": {
+		"cssVariableMapping": "btn-primary-background-color",
+		"value": "#f2b544"
+	},
+	"btnPrimaryBorderColor": {
+		"cssVariableMapping": "btn-primary-border-color",
+		"value": "#f2b544"
+	},
+	"btnPrimaryColor": {
+		"cssVariableMapping": "btn-primary-color",
+		"value": "#071b33"
+	},
+	"btnPrimaryHoverBackgroundColor": {
+		"cssVariableMapping": "btn-primary-hover-background-color",
+		"value": "#ffc963"
+	},
+	"btnPrimaryHoverColor": {
+		"cssVariableMapping": "btn-primary-hover-color",
+		"value": "#071b33"
+	},
+	"fontWeightBolder": {
+		"cssVariableMapping": "font-weight-bolder",
+		"value": "900"
+	}
+}
